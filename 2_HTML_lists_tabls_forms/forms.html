@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LIST - TABLE - FORMS</title>
+</head>
+<body>
+
+
+    <!-- two types of tags  -->
+
+    <!-- closed tags  -->
+    <!-- head, html , h1, p, form, table, body  -->
+
+    <!-- unclosed tags  -->
+    <!-- img, input, br  
+        Horizontal rule ==> <hr>-->
+
+
+    
+    <!-- Block element  -->
+        <!-- Block elements takes complete width, so the next element will be wrapped into the next line -->
+        <!-- h1 -> h2 , p, body , li, ul , div-->
+
+    <!-- Inline Elements  -->
+        <!-- Inline element takes only the content width  -->
+        <!-- input, label , span-->
+
+    <h2>Forms</h2>
+
+    <form>
+        <div style="margin:10px">
+            <label>First name :</label>
+            <input type="text" placeholder="Enter your name" name="firstname"  />
+        </div>
+
+        <div style="margin:10px">
+            <label>Phone number :</label>
+            <input type="number" placeholder="Enter phone number" name="phone" /> 
+            <!-- need to check min and max lenth - > not working -->
+        </div>
+
+        <div style="margin:10px">
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter your email" name="email" id="email"/> 
+        </div>
+
+
+        <div style="margin:10px">
+            <label for="date">Date:</label>
+            <input type="datetime-local" name="date"  id="date"/> 
+        </div>
+
+        <div style="margin:10px">
+            <label for="color">Color:</label>
+            <input type="color"  name="color"  id="color"/> 
+        </div>
+
+        <div style="margin:10px">
+            <label>Gender:</label>
+
+            <label for="male">Male</label>
+            <input type="radio"   name="gender" id="male"/> 
+
+            <label for="female">Female</label>
+            <input type="radio"   name="gender" id="female"/> 
+        </div>
+
+
+        <div style="margin:10px">
+            <label>Prefer - Location :</label>
+            
+            <input type="checkbox" name="location" id="chennai"/> 
+            <label for="chennai">Chennai</label>
+            
+            <input type="checkbox" name="location" id="bangalore"/> 
+            <label for="bangalore">Bangalore</label>
+           
+            <input type="checkbox" name="location" id="hydrabad"/> 
+            <label for="hydrabad">Hydrabad</label>
+            
+            <input type="checkbox" name="location" id="mumbai"/> 
+            <label for="mumbai">Mumbai</label>
+            
+            <input type="checkbox" name="location" id="delhi"/> 
+            <label for="delhi">Delhi</label>
+        </div>
+
+
+        <div style="margin:10px">
+            <select name="country">
+                <option>Select Country</option>
+                <option>India</option>
+                <option>Aus</option>
+                <option>China</option>
+                <option>Russia</option>
+            </select>
+        </div>
+
+        <div style="margin:10px">
+            <label for="description">Desription</label>
+            <textarea name="description" id="description" cols="50" rows="20" placeholder="Hey enter concern here...."></textarea>
+        </div>
+       
+        <button type="submit" style="margin:10px">Submit</button>
+    </form>
+
+</body>
+
+</html>
+
+<!-- http://127.0.0.1:5502/2_HTML_lists_tabls_forms/forms.html?firstname=Prem&phone=23234234&email=premkarthi1234%40gmail.com&date=2023-08-10T22%3A38&color=%23000000&gender=on&location=on&location=on&country=India&description=something -->
