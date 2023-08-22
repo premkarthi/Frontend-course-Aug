@@ -1,0 +1,33 @@
+.list{
+    color: red; 
+    font-size: 40px;
+    font-family: 'Handjet', cursive;
+    font-weight: 600;
+    text-align: right;
+}
+
+.bgcolor{
+    background: green;
+}
+
+#list {
+    color: rgb(24, 0, 177);
+}
+
+/* Pseduo Classes */
+
+#list li:nth-child(5){
+    color: hsl(16, 100%, 66%);
+}
+
+#list > li {
+    color: red;
+    line-height: 20px;
+}
+
+
+
+.bgcolor{
+    font-size: 50px ;
+    font-weight: 600;
+}
