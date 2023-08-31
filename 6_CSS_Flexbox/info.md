@@ -8,8 +8,11 @@ Parant
   flex-direction => row, row-reverse, column, column-reverse
   flex-wrap => nowrap, wrap, wrap-reverse
   Justify-content => flex-start, center, flex-end >=> it push the content horizantal directions
-  Align-items => flex-start, center, flex-end => it push the content vertical directions
-
+  Align-items => flex-start, center, flex-end , baseline, stretch=> it push the content vertical directions
+  Align-content => flex-start, space-between, space-evenly
+  Gap => 
+  Flex-flow : ShortHand 
 
 
 Child
+  Properties
