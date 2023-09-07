@@ -79,10 +79,11 @@
 }   
 
 
-
-@media (max-width: 1000px) and (orientation: landscape){
+ /* 500 -> 1000 and landscape */
+@media (max-width: 1000px) and (orientation: landscape) and (min-width:500px){
     .header{
         background:blue;
     }
-
 }
+
+

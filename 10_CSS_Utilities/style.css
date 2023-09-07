@@ -1,0 +1,80 @@
+/* .parent{ 
+    border: 3px solid #ddd;
+    color: red;
+}
+
+.child{
+    margin: 10px;
+    padding: 20px;
+} */
+
+/* span{
+    border: 1px solid black;
+    margin: inherit;
+    height: inherit;
+    display: inline-block;
+    padding: inherit;
+} */
+
+
+/* 
+div{
+    color: initial; */
+
+    /* takes the value from CSS rule  */
+    /* display: initial; 
+} */
+
+
+
+
+/* .rootParent{
+    color: red;
+} */
+
+/* if incase there is no parent styles then it will refer CSS rule  */
+
+/* .parent{
+    color: green; */
+    /* Reset current level property and inherit from parent */
+    /* color: unset; */
+/* } */
+
+/* .child{
+
+} */
+
+
+/* .rootParent{
+    font-size: 30px;
+}
+
+.parent{
+    font-size: 40px;
+    color: green;
+    font-size: revert;
+} */
+
+/* .child{
+    color: palegoldenrod;
+} */
+
+
+
+.child{
+    /* box-shadow: 10px 10px 10px 10px #fe2626;
+    -webkit-box-shadow: -171px -179px 91px -168px rgba(0,0,0,0.61) inset;
+    -moz-box-shadow: -171px -179px 91px -168px rgba(0,0,0,0.61) inset; */
+    font-size: 30px;
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+    background: rgb(131,58,180);
+    height: 300px;
+    width: 300px;
+background: linear-gradient(90deg, rgba(131,58,180,1) 9%, rgba(58,180,60,1) 32%, rgba(98,147,172,1) 69%, rgba(252,176,69,1) 100%);
+clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    cursor:move;
+
+
+    /* prefixes are used to keep */
+        /* Browser and Backword Compatiblity */
+}
