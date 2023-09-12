@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./flex.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h2>TODO LIST</h2>
+        <button>Add Todo</button>
+      </div>
+      <div class="container">
+        <div class="pending">
+          <h3>Pending</h3>
+          <h4>Let's take a closer look at each of the props:</h4>
+          <li>
+            id: string - The id prop of the Profiler tree that has just committed.
+            This can be used to identify which part of the tree was committed if
+            you are using multiple profilers.
+          </li>
+  
+          <li>
+            actualDuration: number - Time spent rendering the Profiler and its
+            descendants for the current update. This indicates how well the
+            subtree makes use of memoization
+          </li>
+        </div>
+  
+        <div class="going">
+          <h3>On Going</h3>
+          <p>
+            phase: "mount" | "update" - Identifies whether the tree has just been
+            mounted for the first time or re-rendered due to a change in props,
+            state, or hooks.
+          </p>
+        </div>
+  
+        <div class="completed">
+          <h3>Completed</h3>
+          <li>
+            (e.g. React.memo, useMemo, shouldComponentUpdate). Ideally this value
+            should decrease significantly after the initial mount as many of the
+            descendants will only need to re-render if their specific props
+            change.
+          </li>
+  
+          <li>
+            baseDuration: number - Duration of the most recent render time for
+            each individual component within the Profiler tree. This value
+            estimates a worst-case cost of rendering (e.g. the initial mount or a
+            tree with no memoization).
+          </li>
+  
+          <li>
+            startTime: number - Timestamp when React began rendering the current
+            update.
+          </li>
+  
+          <li>
+            commitTime: number - Timestamp when React committed the current
+            update. This value is shared between all profilers in a commit,
+            enabling them to be grouped if desirable.
+          </li>
+  
+          <li>
+            interactions: Set - Set of “interactions” that were being traced when
+            the update was scheduled (e.g. when render or setState were called).
+          </li>
+        </div>
+      </div>
+</body>
+</html>

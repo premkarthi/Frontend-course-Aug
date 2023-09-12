@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter", sans-serif;
+}
+
+.header {
+    height: max-content;
+    background-color: #fcd1c3;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+}
+
+.header h2 {
+    size: 20px;
+    line-height: 24.2px;
+    padding: 25px;
+}
+
+.header button {
+    background-color: #1c92ff;
+    border: 1px;
+    border-radius: 5px;
+    height: 37px;
+    width: 134px;
+    color: #ffffff;
+    line-height: 16.94px;
+    size: 14px;
+    margin: 20px;
+}
+
+.container {
+    height: max-content;
+    width: 90%;
+    border: 1px solid;
+    background-color: #bfbfbf;
+    margin: 40px 60px;
+    display: flex;
+    padding: 20px;
+}
+
+.pending {
+    background-color: #ffb9b9;
+    border-bottom: 1px solid #ffffff;
+    flex-basis: 25%;
+    padding: 0px 20px 20px 20px;
+}
+.pending h2 {
+    size: 16px;
+    line-height: 19.36px;
+    padding: 20px;
+}
+
+.pending h3 {
+    padding: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.pending h4 {
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+.pending li {
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.going {
+    background-color: #fff1a9;
+    flex-basis: 25%;
+    padding: 0px 20px 20px 20px;
+    border-bottom: 1px solid #ffffff;
+    margin-left: 20px;
+    height: max-content;
+}
+
+.going h3 {
+    padding: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+.going p {
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.completed {
+    background-color: #c0ffca;
+    flex-basis: 50%;
+    padding: 0px 20px 20px 20px;
+    border-bottom: 1px solid #ffffff;
+    margin-left: 20px;
+    height: max-content;
+}
+.completed h3 {
+    padding-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.completed li {
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        padding: 10px;
+    }
+    .header {
+        background-color: #afb7ff;
+        align-items: center;
+        flex-direction: column;
+    }
+    .header h2 {
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+    .going,.pending,.completed {
+        flex-basis: 100%;
+        margin: 10px 0px;
+    }
+}
