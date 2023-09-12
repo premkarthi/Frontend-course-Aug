@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* div{
+        width: 600px;
+        background-color: green;
+        padding: 10px;
+    }
+    h2{
+        width: 90vw;
+        height: 50%;
+        background-color: red;
+        font-size: 10vh;
+    } */
+
+
+
+    /* Psuedo Classes */
+
+    body{
+        display: grid;
+        place-items: center;
+    }
+    .parent{
+        width: 100px;
+        height: 100px;
+        background: green;
+        transition: 0.5s;
+    }
+
+    .parent:hover{
+        background: red;
+        font-size: 20px;
+    }
+
+    input:focus{
+        border-color: red;
+        outline-color: red;
+        background: red;
+    }
+
+    p:target{
+        background: yellow;
+    }
+
+    input:checked ~ label{ 
+        border: 2px solid;
+        background-color: red;
+    }
+
+    button:disabled{
+        background: red;
+    }
+
+
+    /* ul li:last-child{
+        color: red;
+    } */
+
+    ul li:nth-child(2n){
+        color: green;
+    }
+
+</style>
+<body>
+
+    <div class="parent">
+        <h2>BOX</h2>
+
+    </div>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium modi facere perferendis tempora asperiores minus culpa saepe repellendus, est voluptatem voluptate iusto velit, omnis commodi odio. Illo saepe vel deleniti!</p>
+
+    <input type="radio" id="rad">
+    <label for="rad">Label </label>
+
+
+    <button disabled>Submit</button>
+
+
+
+    <ul>
+        <li>Item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+        <li>item</li>
+    </ul>
+</body>
+</html>

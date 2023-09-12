@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Desktop</title>
+        <link rel="stylesheet" href="Desktopcss.css">
+    </head>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: #fcd1cf;
+    font-family: 'Inter';
+    font-size: 20px;
+    line-height: 24.2px;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header button{
+    width: 134px;
+    height: 37px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 16.94px;
+    background-color: #1c92ff;
+    border: 0px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main_container{
+    margin: 10px;
+    width: 100%;
+    background-color: #edfeff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main{
+    width: 1340px;
+    height: 520px;
+    background-color: #bfbfbf;
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+
+}
+
+
+.card{
+    margin: 8px;
+    width: 304px;
+    background-color: #ffb9b9;
+}
+
+.card h2{
+    border: 1px solid #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 20px;
+    line-height: 24.2px;
+}
+
+
+.card1{
+    margin: 8px;
+    margin-top: 4px;
+    width: 304px;
+    background-color: #FFF1A9;
+}
+
+.card1 h2{
+    width: 296px;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'inter';
+    font-size: 20px;
+    line-height: 24.2px;
+}   
+
+.card1 p{
+    border: 0px solid black;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 16px;
+    
+}
+
+.card2{
+    margin: 8px;
+    border-top: 4px;
+    width: 558px;
+    background-color: #c0ffca;
+}
+
+.card2 h2{
+    margin-bottom: 1px;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter';
+    font-size: 20px;
+    line-height: 24.2px;
+}
+
+.card2 p{
+    margin: 0px;
+    font-family: "Inter",sans-serif;
+    font-size: 16px;
+    line-height: 19.36px;
+    border: 0px solid black;
+}
+
+@media (max-width:1000px){
+     .header{
+        background: blue;
+    }
+}
+
+
+
+    </style>
+    <body>
+        <div class="header">
+            <h2>TODO LIST</h2>
+            <button>Add Todo</button>
+        </div>
+        <div class="main_container">
+            <div class="main">
+                <div class="card">
+                    <h2>Pending</h2>
+                    <p>
+                        
+                        Let’s take a closer look at each of the props:
+
+                    <li> id: string - The id prop of the Profiler tree that has just committed. This can be used to identify which part of the tree was committed if you are using multiple profilers.</li>
+                        
+                        <li>actualDuration: number - Time spent rendering the Profiler and its descendants for the current update. This indicates how well the subtree makes use of memoization</li>
+                    
+                    </p>
+                </div>
+                <div class="card1">
+                    <h2>On Going</h2>
+                    <p>
+                        phase: "mount" | "update" - Identifies whether the tree has just been mounted for the first time or re-rendered due to a change in props, state, or hooks.
+                    </p>
+
+                </div>
+                <div class="card2">
+                    <h2>Completed</h2>
+                    <p>
+                        
+                        <li> (e.g. React.memo, useMemo, shouldComponentUpdate). Ideally this value should decrease significantly after the initial mount as many of the descendants will only need to re-render if their specific props change.</li>
+    
+                        <li>baseDuration: number - Duration of the most recent render time for each individual component within the Profiler tree. This value estimates a worst-case cost of rendering (e.g. the initial mount or a tree with no memoization).</li>
+    
+                        <li>startTime: number - Timestamp when React began rendering the current update.</li>
+    
+                        <li>commitTime: number - Timestamp when React committed the current update. This value is shared between all profilers in a commit, enabling them to be grouped if desirable.</li>
+    
+                    <li>interactions: Set - Set of “interactions” that were being traced when the update was scheduled (e.g. when render or setState were called).</li>
+                    
+                    </p>
+    
+            </div>
+        </div>
+
+    </body>
+</html>
