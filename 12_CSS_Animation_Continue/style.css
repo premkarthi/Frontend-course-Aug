@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* .box {
+    width: 200px;
+    height: 200px;
+    background: green; */
+    /* position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); */
+    /* transform: translate(-50%, -50%); */
+
+
+    /* transform: rotate(349deg); */
+    /* transform: scale(0.5); */
+    /* transform: skew(30deg , 20deg); */
+    /* transform: rotateZ(100deg); */
+/* }        */
+
+
+
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: green; 
+    /* animation: rotate ; */
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: cubic-bezier(.42, 0, .58, 1); */
+    animation-timing-function: steps(5, end);
+}
+
+/* 
+
+@keyframes jumb {
+    0%{
+        transform: translateY(-500%);
+    }
+    25%{
+        transform: scale(0.5);
+    }
+
+    50%{
+        transform: scale(1.5);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+} */
+
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    90%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+/* .box::selection{
+    color: red;
+    background: white;
+} */
+
+ul li::marker{
+    color: red;
+    content: ' ✅ ';
+    font-size: 20px;
+}
+/* 
+input::placeholder{
+    font-size: 20px;
+    color: red;
+} */
+
+
+li::before{
+    content: "+Hey am Before ";
+    color: rebeccapurple;
+}
+
+li::after{
+    content: " 😎";
+    color: green;
+}
