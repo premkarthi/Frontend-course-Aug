@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Libre+Baskerville:wght@700&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Inter:wght@700&family=Libre+Baskerville:wght@700&family=Work+Sans&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #74c69d;
+}
+.logo {
+  width: 120px;
+  height: 50px;
+  margin: 20px 60px;
+  line-height: 25px;
+}
+ul {
+  display: flex;
+  gap: 20px;
+  align-self: center;
+  margin: 20px 60px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffffff;
+}
+.maincontainer {
+  width: 100%;
+  height: 594px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #74c69d;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.invite {
+  padding-top: 70px;
+  padding-left: 60px;
+  font-family: "Work Sans", sans-serif;
+  color: #ffffff;
+  line-height: 20px;
+}
+.paraone {
+  width: 80%;
+  font-family: "Crimson Text", serif;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-left: 60px;
+  font-size: 40px;
+}
+.paratwo {
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding-top: 10px;
+  padding-left: 60px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.buttonone {
+  width: 170px;
+  height: 48px;
+  margin-top: 30px;
+  margin-left: 60px;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  border-radius: 5px solid white;
+}
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.rightimage {
+  width: 100%;
+  height: 400px;
+}
+.layouttwo {
+  width: 100%;
+  height: 590px;
+  background-color: #ffffff;
+}
+.common {
+  text-align: center;
+  padding-top: 60px;
+  font-family: "Work Sans", sans-serif;
+  color: #74c69d;
+}
+.title {
+  line-height: 85px;
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+}
+.centerpara {
+  line-height: 40px;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+}
+.companylogo {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+.layouttwo_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+.commonbutton {
+  width: 170px;
+  height: 48px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+.layoutthree {
+  width: 100%;
+  display: flex;
+
+}
+.layoutthree_left {
+  width: 50%;
+}
+.threeimage {
+  width: 100%;
+  margin: 20px 60px;
+}
+.layoutthree_right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  width: 80%;
+  padding-left: 100px;
+  padding-top: 90px;
+}
+.commonpara {
+  line-height: 20px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+  color: #282c31;
+  width: 90%;
+  padding-left: 100px;
+  padding-top: 20px;
+}
+.layoutthree_button {
+  margin-left: 100px;
+  margin-top: 30px;
+}
+.layoutfour {
+  padding-bottom: 30px;
+  width: 100%;
+  display: flex;
+}
+.layoutfour_left {
+  width: 50%;
+}
+.layoutfour_right {
+  width: 50%;
+}
+.layoutfour_button {
+  margin-left: 95px;
+  margin-top: 30px;
+}
+.fourimage {
+  width: 90%;
+}
+.team {
+  display: flex;
+  justify-content: space-evenly;
+}
+.box{
+  margin-bottom: 90px;
+  height: 290px;
+  border: 10px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 3px 4px 12px 1px #000000;
+}
+.teamimage{
+  width: 100%;
+}
+.name{
+  font-family: "Crimson Text", serif;
+  font-size: 24px;
+  line-height: 20px;
+  padding-top: 20px;
+}
+.position{
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+  padding-top: 20px;
+  color: #24282c;
+}
+.layoutfive_button{
+ display: flex;
+ justify-content: center;
+ margin-bottom: 50px;
+}
+.footer{
+  width: 100%;
+  height: 100px;
+  background-color: #74c69d;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.icon{
+  padding-left: 52px;
+  padding-top: 31px;
+}
+.iconimage{
+ margin: 10px;
+}
+.copyright{
+  padding-right: 85px;
+  padding-top: 38px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px){
+  .header{
+    width:auto 0;
+    display: flex;
+    flex-direction:column;
+  }
+  .logo{
+   margin-left: 26px;
+  }
+  .maincontainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .left{
+    display: flex;
+    flex-direction: column;
+    width:fit-content
+  }
+  .right{
+    width: auto;
+    display:flex;
+    flex-direction: column;
+
+  }
+  .rightimage{
+    align-self: flex-start;
+  }
+  .layouttwo{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 215px;
+  }
+  .centerpara{
+    width: auto;
+   text-align:center;
+   font-size: 20px;
+  }
+  .companylogo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content:space-evenly;
+    margin-top: 25px;
+  }
+  .companyimage{
+    padding-top:40px
+  }
+  .layoutthree{
+    display: flex;
+    flex-direction:column;
+  }
+  .layoutthree_left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .threeimage{
+    margin-top: 480px;
+  }
+  .layoutthree_right{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+  }
+  .heading{
+    width: 100%;
+    padding-left:15px;
+    padding-top: 10px;
+    font-size: 24px;
+  }
+  .commonpara{
+    font-size: 15px;
+    padding-left: 15px;
+  }
+  .layoutthree_button{
+    margin-left: 10px;
+    margin-top: 35px;
+  }
+   .layoutfour{
+    display: flex;
+    flex-direction: column-reverse;
+   }
+   .layoutfour_left{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+   }
+   .layoutfour_button{
+    margin-left: 10px;
+    margin-top: 30px;
+   }
+   .layoutfour_right{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+   }
+   .fourimage{
+    width: 100%;
+    margin-top: 50px;
+   }
+   .layoutfive{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2px;
+   }
+   .team{
+    display: flex;
+    flex-direction: column;
+   }
+   .box{
+    margin-top: 30px;
+    margin-bottom: auto;
+    width:250px;
+    height: auto;
+   }
+   .layoutfive_button{
+    margin: 50px;
+   }
+   .footer{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .icon{
+    align-items:center;
+    /* padding-left: 32px; */
+  }
+  .copyright{
+    text-align: center;
+    padding: 24px ;
+  }
+}
+
+</style>
+<body>
+    <div class="layoutone">
+        <div class="header">
+          <img class="logo" src="./images/Frame 4 (2).jpg" alt="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="maincontainer">
+          <div class="left">
+            <h3 class="invite">WELCOME</h3>
+            <p class="paraone">Lorem ipsum dolor sit amet consectetur</p>
+            <p class="paratwo">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+              nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
+              voluptate culpa nesciunt delectus iste?
+            </p>
+            <button class="buttonone">Explore</button>
+          </div>
+          <div class="right">
+            <img class="rightimage" src="./images/Group.jpg" alt="rightimage" />
+          </div>
+        </div>
+      </div>
+      <div class="layouttwo">
+        <h4 class="common">P A R T N E R S</h4>
+        <h3 class="title">Lorem Ipsum Dolor</h3>
+        <p class="centerpara">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="companylogo">
+          <img class="companyimage" src="./images/google.jpg" alt="Google" />
+          <img
+            class="companyimage"
+            src="./images/Microsoft.jpg"
+            alt="Microsoft"
+          />
+          <img class="companyimage" src="./images/airbnb.jpg" alt="Airbnb" />
+          <img class="companyimage" src="./images/facebook.jpg" alt="Facebook" />
+          <img class="companyimage" src="./images/Spotify.jpg" alt="Spotify" />
+        </div>
+        <div class="layouttwo_button">
+          <button class="commonbutton">Learn More</button>
+        </div>
+      </div>
+      <div class="layoutthree">
+        <div class="layoutthree_left">
+          <img class="threeimage" src="./images/layout3.jpg" alt="image" />
+        </div>
+        <div class="layoutthree_right">
+          <h3 class="heading">Lorem ipsum dolor sit amet consectetur</h3>
+          <p class="commonpara">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+            nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
+            voluptate culpa nesciunt delectus iste?
+          </p>
+          <div class="layoutthree_button">
+            <button class="commonbutton">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <div class="layoutfour">
+        <div class="layoutfour_left">
+          <h3 class="heading">Lorem ipsum dolor sit amet consectetur</h3>
+          <p class="commonpara">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+            nemo hic quos, ab, dolor aperiam nobis cum est eos error ipsum,
+            voluptate culpa nesciunt delectus iste?
+          </p>
+          <div class="layoutfour_button">
+            <button class="commonbutton">Learn More</button>
+          </div>
+        </div>
+        <div class="layoutfour_right">
+          <img class="fourimage" src="./images/layout4.jpg" alt="layout4" />
+        </div>
+      </div>
+      <div class="layoutfive">
+        <h4 class="common">T E A M</h4>
+        <h3 class="title">Our Talents</h3>
+        <p class="centerpara">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <div class="team">
+          <div class="box box1">
+            <img class="teamimage" src="./images/team1.jpg" alt="team1" />
+            <div class="teamcontent">
+              <h3 class="name">Peg Legge</h3>
+              <p class="position">CEO</p>
+            </div>
+          </div>
+          <div class="box box2">
+            <img class="teamimage" src="./images/team2.jpg" alt="team2" />
+            <div class="teamcontent">
+              <h3 class="name">Richard Guerra</h3>
+              <p class="position">CTO</p>
+            </div>
+          </div>
+          <div class="box box3">
+            <img class="teamimage" src="./images/team3.jpg" alt="team3" />
+            <div class="teamcontent">
+              <h3 class="name">Alexandra Stolz</h3>
+              <p class="position">DESIGNER</p>
+            </div>
+          </div>
+          <div class="box box4">
+            <img class="teamimage" src="./images/team4.jpg" alt="team4" />
+            <div class="teamcontent">
+              <h3 class="name">Janet Bray</h3>
+              <p class="position">DEVELOPER</p>
+            </div>
+          </div>
+        </div>
+        <div class="layoutfive_button">
+          <button class="commonbutton">View Team</button>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="icon">
+          <img
+            class="iconimage"
+            src="./images/facebookicon.jpg"
+            alt="facebookicon"
+          />
+          <img
+            class="iconimage"
+            src="./images/instagramicon.jpg"
+            alt="instagramicon"
+          />
+          <img
+            class="iconimage"
+            src="./images/twittericon.jpg"
+            alt="twittericon"
+          />
+          <img
+            class="iconimage"
+            src="./images/pinteresticon.jpg"
+            alt="pinteresticon"
+          />
+          <img class="iconimage" src="./images/tiktokicon.jpg" alt="tiktokicon" />
+          <img
+            class="iconimage"
+            src="./images/whatsappicon.jpg"
+            alt="whatsappicon"
+          />
+          <img
+            class="iconimage"
+            src="./images/youtubeicon.jpg"
+            alt="youtubeicon"
+          />
+        </div>
+        <div>
+          <p class="copyright">Â© Start, 2022. All rights reserved.</p>
+        </div>
+      </div>
+</body>
+</html>
