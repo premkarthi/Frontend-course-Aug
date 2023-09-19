@@ -1,0 +1,54 @@
+header, header ul, .links, .logo{
+    display: flex;
+    align-items: center;
+}
+
+header{
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+}
+
+header .logo{
+    font-size: 18px;
+    margin-right: 40px;
+}
+
+header .logo span{
+    margin-left: 10px;
+}
+.links{
+    justify-content: space-between;
+}
+
+header ul{
+    list-style: none;
+}
+
+header ul li{
+    margin: 0px 20px;
+    font-size: 17px;
+}
+
+
+header ul li a{
+    text-decoration: none;
+    color: #222222;
+}
+header ul li a i{
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.btn{
+    font-size: 18px;
+    margin-left: 40px;
+    padding: 5px 16px;
+    border-radius: 30px;
+    height: 38px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: rgb(0,153,255);
+    background: linear-gradient(90deg, rgba(0,153,255,1) 0%, rgba(204,0,255,1) 100%);
+}

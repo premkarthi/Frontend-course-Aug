@@ -1,0 +1,119 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    color: #222222;
+}
+
+.main-container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.pricing{
+    background-image: url("../images/bg-ovrelay.png");
+    background-size: contain;
+    padding: 100px  0px;
+}
+
+.title{
+    font-size: 80px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.5970982142857143) 0%, rgba(0,0,0,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 400;
+    text-align: center;
+}
+.paragraph{
+    font-size: 38px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.5970982142857143) 0%, rgba(0,0,0,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 400;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.plansBlock{
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.planCard{
+    width: 24%;
+    padding: 20px;
+    box-shadow: 0px 0px 2px 2px #ddd;
+    border-radius: 20px;
+    margin:0px 10px;
+    background: white;
+}
+.plansButton{
+    width: 100%;
+    margin-left: 0;
+    border-radius: 12px;
+    height: 47px;
+}
+
+.planCard ul{
+    margin: 20px 15px;
+}
+.planCard ul li{
+    margin-bottom: 10px;
+
+}
+.planCard ul li::marker{
+    content: '✔️ ';
+}
+
+.price span:first-child{
+    font-size: 50px;
+    background: rgb(0,153,255);
+    background: linear-gradient(90deg, rgba(0,153,255,1) 0%, rgba(204,0,255,1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.planLabel{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.planLabel label{
+    box-shadow: 0px 0px 4px 2px #efefef;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 30px;
+}
+.planLabel label i{
+    border-radius: 10px;
+    color: #f49f00;
+}
+
+.planLabel h4{
+    font-size: 17px;
+    font-weight: 400;
+}
+.price span sup{
+    background: #51474C;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color: #51474C;
+    font-size: 12px;
+    width: 30%;
+    display: inline-block;
+    opacity: 0.4;
+}
+
