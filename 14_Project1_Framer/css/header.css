@@ -82,3 +82,8 @@ header ul li a i{
 .dropdown li{
     margin-bottom: 10px;
 }
+
+
+.dropdown li:hover{
+    background: red;
+}
