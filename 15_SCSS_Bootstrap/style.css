@@ -1,0 +1,59 @@
+header {
+  font-size: 20px;
+}
+
+footer {
+  background: rebeccapurple;
+}
+
+body {
+  background: "#ffffff";
+  color: "#000000";
+}
+
+header ul li a {
+  color: aquamarine;
+}
+@media (min-width: 1200px) {
+  header ul li a {
+    color: green;
+  }
+}
+@media (min-width: 768px) {
+  header ul li a {
+    color: red;
+  }
+}
+header ol {
+  background: red;
+}
+@media (min-width: 768px) {
+  header ol {
+    background: green;
+  }
+}
+
+footer, header {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+header {
+  background: red;
+  box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+  color: #ffffff;
+  width: calc(100% - 200px);
+}
+
+footer {
+  background: blue;
+  box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+  color: #000000;
+}
+
+article {
+  background: purple;
+  box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+  color: #dddddd;
+}/*# sourceMappingURL=style.css.map */

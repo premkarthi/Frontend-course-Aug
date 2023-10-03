@@ -1,0 +1,120 @@
+@use './second';
+@import './footer';
+
+// CSS way creating variables
+
+// :root{
+//     --primary : '#ffffff',
+//     --secondary: '#000000'
+// }
+
+// body{
+//     background: var(--secondary);
+//     color:  var(--primary);
+
+// }
+
+
+
+
+// SCSS way 
+
+$primary : '#ffffff';
+$secondary: '#000000';  
+
+
+body{
+    background: $primary;
+    color: $secondary;
+}
+
+
+
+
+// Nesting
+
+// CSS way 
+// header ul li a{
+//     color: aquamarine;
+// }
+
+// SCSS way 
+
+header{
+    ul {
+        li{
+            a{
+                //desktop
+                color: aquamarine;
+                //ipad
+                @media (min-width: 1200px) {
+                    color: green;
+                }
+                //mobile
+                @media (min-width: 768px) {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    ol{
+        background: red;
+        @media (min-width: 768px) {
+            background: green;
+        }
+    }
+}
+
+
+// Functions / Mixins
+// To reuse some bulk of actions/task
+// Resolves duplicates code
+
+
+@mixin theme($bgColor, $textColor){ 
+    background: $bgColor;
+    box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+    color: $textColor;
+}
+
+
+
+// Extends
+// Same like mixins but we cannot pass any paramters
+// hardcode styles
+
+%message {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+}
+
+
+
+
+header{
+    @extend %message;
+    @include theme(red, #ffffff);
+    // css way 
+    width: calc(100% - 200px);
+    // scss way 
+    // width: math.div(100% - 200px);
+}
+
+footer{
+    @include theme(blue, #000000);
+    @extend %message;
+}
+
+article{
+    @include theme(purple, #dddddd);
+}
+
+
+
+// @media (min-width: 768px) {
+//     header ol{
+//         background: green($color: #000000);
+//     }
+// }
