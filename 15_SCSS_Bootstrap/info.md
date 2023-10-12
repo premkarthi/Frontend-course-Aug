@@ -19,7 +19,8 @@ Framework
 
 
 <!-- Task  -->
-=>using SCSS
-=>Color and fonts need to use variables
-=>Mixins or extends 
-=>Nesting 
+=> Using SCSS
+=> Color and fonts need to use variables
+=> Mixins or extends 
+=> Nesting 
+=> With Responsive for ipads and mobile

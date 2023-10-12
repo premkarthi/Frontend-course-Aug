@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Inter:wght@400;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body .background {
+  width: 75%;
+  height: 600px;
+  background-color: #E5E7EF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .background .innerbackground {
+  width: 90%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 30px 20px;
+  display: flex;
+  padding: 10px;
+}
+body .background .left {
+  width: 50%;
+  background-color: #FE6B68;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .background h1 {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+  margin: 0;
+}
+body .background .leftpara {
+  width: 60%;
+  margin: auto;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+body .background .right {
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .background h5 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+}
+body .background .rightparaone {
+  font-weight: 400;
+  font-size: 18px;
+}
+body .background .inputone {
+  height: 50px;
+  width: 250px;
+  border-radius: 10px;
+}
+body .background .inputtwo {
+  border-radius: 10px;
+  height: 50px;
+  width: 250px;
+}
+body .background .rightparatwo {
+  color: #FE6B68;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+body .background button {
+  width: 250px;
+  height: 40px;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #FE6B68;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+}
+body .background .rightparathree {
+  color: #FE6B68;
+}
+body .background .images {
+  display: flex;
+  gap: 40px;
+}
+body .background img {
+  width: 45px;
+  height: 40px;
+}/*# sourceMappingURL=task11.css.map */

@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// colors, font-family, font-size
+
+$myBackground:#ffffff;
+$boxWidth:420px;
+$boxheight:75px;
+$border:16px;
+$imgwidth:105px;
+$imgheight:80px;
+$imgcolor:#afaaaa;
+$imgRadius:16px;
+
+
+.container{
+      max-width: 1425px;
+      height: 100vh;
+      padding: 20px;
+      background: linear-gradient(63.46deg, #FFFFFF 0%, rgba(255, 255, 255, 0.76) 31.25%, rgba(255, 255, 255, 0.19) 98.44%);
+      border: 2px solid blue;
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        @media only screen and (max-width: 1000px){
+            flex-direction: column;
+        }
+}
+
+
+
+.oneboxes{
+    background-color: #FE6B68;
+    border-radius: 35px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+
+    @media only screen and (max-width: 1000px){
+        width: 100%;
+    }
+}
+
+.oneboxes h3{
+    color: $myBackground;
+    font-family: Inter;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oneboxes p{
+    color: $myBackground;
+    font-family: Inter;
+    font-size: 50px;
+    line-height: 60.51px;
+    font-weight: 600;
+    text-align:center;
+}
+
+
+.Twoboxes{
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 1000px){
+        width: 100%;
+    }
+}
+
+.Twoboxes h4{
+    width: 226px;
+    height: 53px;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43.57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Twoboxes h6{
+    width: 410px;
+    height: 53px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.78px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+input{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    width: $boxWidth;
+    height: $boxheight;
+    background-color: $myBackground;
+    border-radius: $border;
+    border: 2px solid black;
+    
+}
+
+.box2{
+    margin-top: 15px;
+}
+
+
+.Recovery {
+    margin-left: 230px;
+    width: 176px;
+    height: 36px;
+    color: red;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+
+.Twoboxes button{
+    margin-top: 15px;
+    width:$boxWidth;
+    height: $boxheight;
+    border-radius: 9px;
+    background-color: #FE716E;
+    font-family: Inter;
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 32.68px;
+   color: $myBackground;
+   border: none;
+
+}
+
+.Continue{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width:176px;
+    height: 36px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: #FE716E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.image{
+    flex-direction: row;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img{
+    margin-right: 20px;
+    width: $imgwidth;
+    height: $imgheight;
+    border-radius:$imgRadius ;
+    background-color: $imgcolor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

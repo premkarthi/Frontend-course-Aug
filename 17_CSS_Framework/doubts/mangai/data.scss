@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    $align: center;
+    $color: #FFFFFF;
+  
+  .container{
+  background-color: #E5E7EF;
+  width: 100%;
+  padding:40px;
+  max-width: 1200px;
+  margin: auto;
+  @media only screen and (max-width: 748px) {
+    padding: 0;
+  }
+    .box{
+        border-radius: 30px;
+        border: 2px solid;
+        border-color: #FFFFFF;
+        background-color: rgb(255 255 255 / 45%);
+        display: flex;
+
+        @media only screen and (max-width: 748px) {
+            margin-left: 25px;
+            flex-direction: column;
+            align-items: $align;
+            width: 90%;
+        }
+        .content{
+            background-color: #FE6B68;
+            flex-basis: 50%;
+            padding:20px;
+            margin:10px;
+            border-radius: 20px;
+            h1{
+                font-size: 65px;
+                line-height: 121.02px;
+                font-weight: 600;
+                text-align: $align;
+                font-style: inter;
+                color: #FFFFFF;
+                padding:30px;
+                margin-top: 20px;
+                padding-bottom: 0px;
+                
+            }
+            p{
+                font-size: 34px;
+                line-height: 40px;
+                font-weight: 545;
+                text-align: $align;
+                font-style: inter;
+                color: #FFFFFF;
+                padding:20px;
+                margin-bottom: 200px;
+                padding-top: 0px;
+                
+            }
+        
+        
+        }
+        .login_page{
+            padding:10px;
+            flex-basis: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media only screen and (max-width: 748px) {
+                flex-basis: 100%;
+                width: 100%;
+            }
+            .innerBlock{
+                width: 70%;
+            }
+            h2{
+                font-size: 29px;
+                font-weight: 700;
+                line-height: 43.75px;
+                text-align: $align;
+                margin-bottom: 0;
+            }
+            p{
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 21.78px;
+                text-align: $align;
+                margin-bottom: 20px;
+            }
+            input{
+                border-radius: 10px;
+                text-align: center;
+                background-color: rgba(255, 255, 255, 1);
+                border: 0;
+                height: 20px;
+                padding: 20px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .entry{
+                text-align: right;
+                a{
+                color:rgba(254, 107, 104, 1);
+                font-size: 11px;
+                font-weight: 300;
+
+                }
+  
+            }
+            button{
+                background-color:rgba(254, 113, 110, 1);
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 32.78px;
+                text-align: $align;
+                color: rgba(255, 255, 255, 1);
+                border-radius: 10px;
+                border:0;
+                padding:5px;
+                margin-top: 25px;
+                width: 100%;
+            }
+            .continue{
+                display: flex;
+                margin-top: 20px;
+                justify-content: center;
+                div{
+                    color:rgba(255, 255, 255, 0.81);
+                    border: 1px solid;
+                    width:60px;
+                    height:0px;
+                    background-color: rgba(255, 255, 255, 0.81);
+                    margin:10px;
+                }
+                p{
+                    color:#FE6B68;
+                    font-size: 10px;
+                    font-style: inter;
+                    font-weight: 300;
+  
+                }
+                
+  
+                }
+                .social{
+                    text-align: $align;
+                    padding: 15px;
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width:50%;
+                    }
+                div{
+                       border-radius: 10px;
+                       background-color: rgba(255, 255, 255, 1);
+                       padding:5px;
+                       margin-right: 15px;
+                    }
+                
+            }
+        }
+  
+    
+    
+    }
+  
+  
+  }
+  
+
+  
