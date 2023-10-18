@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Inter:wght@400;600;700;800&family=Montserrat:wght@700&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.layoutone_color{
+ background-color: #B9EAA8;
+}
+.text_color{
+    color:#252B42
+}
+.button_color{
+    background-color: #23A6F0;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+.content{
+    padding-top: 50px;
+}
+
+.paraone{
+    color: #23A6F0;
+}
+.paratwo{
+    font-weight: 400;
+    font-size: 13px;
+    color:#737373;
+}
+.buttonone{
+    height: 40px;
+    background-color:#23A6F0;
+    color: #FFFFFF;
+    font-size: 15px;
+    width: 40%;
+    
+}
+.buttontwo{
+    height: 40px;
+    background-color: #B9EAA8;
+    color: #23A6F0;
+}
+.layouttwo_color{
+    background-color: #FFFFFF;
+}
+.parafour{
+    padding-top: 10px;
+}
+.buttonthree{
+    color:#23A6F0;
+    background-color: #FFFFFF;
+}
+.rating{
+   margin-left:95px;
+}
+.download_color{
+    color:#737373;
+}
+.download{
+    height: 20px;
+}
+.price_color_one{
+    color:#BDBDBD;
+}
+.price_color_two{
+    color:#40BB15;
+}
+.icon_image{
+    width:40px;
+    height:30px;
+}
+.buttonfour{
+    height:33px;
+    color: #23A6F0;
+}
+.parafive{
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color:#737373 ;
+}
+.heading_own{
+    padding-left: 69px;
+}
+.star_rating{
+    margin-left: 64px;
+}
