@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .root {
+    background-color: aqua;
+    text-align: center;
+  }
+  .mail_id {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    border-color: antiquewhite;
+  }
+  .pswd {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    border-color: antiquewhite;
+  }
+  .submit_button {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    border-color: antiquewhite;
+  }
+  .title {
+    padding: 30px;
+    color: deeppink;
+  }
+  
