@@ -43,3 +43,23 @@ function formSubmitted(e){
 
 submit.addEventListener('click', formSubmitted)
 
+
+
+// next
+
+// Delete() 
+// Date()
+
+
+
+// Do the same todo list with other fields
+// 1. username
+// 2. Mail 
+// 3. Date
+// 4. Select Option -> Degree
+// 5. Checkbox - Preferred location -> Chennai, bangalore, Delhi
+// 6. Radio - female, male
+// 7. Submit
+
+
+// Javascript Array Methods
