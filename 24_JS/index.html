@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form>
+        <div class="formGroup">
+            <label for="username">Username</label>
+            <input type="text" placeholder="Username" name="username" id="username" />
+        </div>
+        <div class="formGroup">
+            <label for="email">Email</label>
+            <input type="email" placeholder="Email" name="email" id="email" />
+        </div>
+        <div class="formGroup">
+            <label for="date">Date</label>
+            <input type="date" placeholder="Date" name="date" id="date" />
+        </div>
+        <div class="formGroup">
+            <label for="degree">Select Degree</label>
+            <select name="degree" id="degree">
+                <option value="-1">Select options</option>
+                <option value="BE">BE</option>
+                <option value="BSC">BSC</option>
+                <option value="BCA">BCA</option>
+                <option value="Pharma">Pharma</option>
+            </select>   
+        </div>
+        <div class="formGroup checkboxes" id="location">
+            <label for="location">Preferred Location : </label>
+            
+            <input type="checkbox" name="location" id="chennai"  />
+            <label for="chennai">Chennai</label>
+            <input type="checkbox" name="location" id="bangalore" />
+            <label for="bangalore">Bangalore</label>
+            <input type="checkbox" name="location" id="delhi" />
+            <label for="delhi">Delhi</label>
+        </div>
+
+        <div class="formGroup checkboxes">
+            <label for="gender">Gender: </label>
+            
+            <input type="radio" name="gender" checked id="male" />
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" />
+            <label for="female">Female</label>
+        </div>
+
+        <button id="submit">Submit</button>
+    </form>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
