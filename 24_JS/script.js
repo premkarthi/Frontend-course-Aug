@@ -1,90 +1,126 @@
-let userList = []
+let userList = [];
 
-let username = document.getElementById('username')
-let email = document.getElementById('email')
-let date = document.getElementById('date')
-let degree = document.getElementById('degree')
-let locationByuser = document.getElementById('location')
-let gender = document.getElementById('gender')
-let submit = document.getElementById('submit')
+let form = document.querySelector('form');
+let username = document.getElementById('username');
+let email = document.getElementById('email');
+let date = document.getElementById('date');
+let degree = document.getElementById('degree');
+let locationByUser = document.querySelectorAll('input[name="location"]');
+let gender = document.querySelectorAll('input[name="gender"]');
+let submit = document.getElementById('submit');
 
-console.log(locationByuser);
-submit.addEventListener('click', function(e){
-        e.preventDefault()
-        let selectedLocationValues = []
-        let chennai = document.getElementById('chennai')
-        let bangalore = document.getElementById('bangalore')
-        let delhi = document.getElementById('delhi')
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let userData = validateForm();
+    if (userData) {
+        userList.push(userData);
+        console.log(userList);
+        form.reset();
+    }
+});
 
-        if(chennai.checked){
-            selectedLocationValues.push("chennai")
-        }
-        if(bangalore.checked){
-            selectedLocationValues.push("bangalore")
-        }
-        if(delhi.checked){
-            selectedLocationValues.push("delhi")
-        }
+function createError(input, parent) {
+    let element = document.createElement('div');
+    element.style.color = 'red';
+    element.style.marginTop = '10px';
+    element.innerText = `${input} is required`;
+    parent.appendChild(element);
+}
 
-        let genderValue = ""
-        let male = document.getElementById('male')
+function validateForm() {
+    let selectedLocationValues = Array.from(locationByUser)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.id);
 
-        if(male.checked){
-            genderValue = "Male"
-        }else{
-            genderValue = "Female"
-        }
+    let genderValue = Array.from(gender)
+        .find(radio => radio.checked)
+        .id;
 
-        let isValid = checkValidation(username, email, date, degree,selectedLocationValues, genderValue)
+    let isValid = true;
 
+    document.querySelectorAll('.error-message').forEach(element => element.remove());
 
-        if(isValid){
-            let userObj = {
-                username: username.value,
-                email: email.value,
-                date: date.value,
-                degree: degree.value,
-                locationByuser: selectedLocationValues,
-                gender: genderValue,
-            }
-    
-            userList.push(userObj)
-            console.log(userList);
-    
-            username.value = ''
-            email.value = ''
-            date.value = ''
-        }
-     
-})
+    if (!username.value) {
+        createError('Username', username.parentElement);
+        isValid = false;
+    }
+    if (!email.value) {
+        createError('Email', email.parentElement);
+        isValid = false;
+    }
+    if (!date.value) {
+        createError('Date', date.parentElement);
+        isValid = false;
+    }
+    if (degree.value === '-1') {
+        createError('Degree', degree.parentElement);
+        isValid = false;
+    }
+    if (selectedLocationValues.length === 0) {
+        createError('Location', locationByUser[0].parentElement);
+        isValid = false;
+    }
+    if (!genderValue) {
+        createError('Gender', gender[0].parentElement);
+        isValid = false;
+    }
 
-function createError(input, parent){
-    let element = document.createElement("div")
-    element.style.color = 'red'
-    element.style.marginTop = '10px'
-    element.innerText = `${input} is Required`
-    parent.appendChild(element)
+    if (isValid) {
+        return {
+            username: username.value,
+            email: email.value,
+            date: date.value,
+            degree: degree.value,
+            locationByuser: selectedLocationValues,
+            gender: genderValue,
+        };
+    } else {
+        return null;
+    }
 }
 
 
-function checkValidation(username, email, date, degree,selectedLocationValues, genderVal){
 
-    if(username.value === '' ){
-        createError(username.name, username.parentElement)
-    }
-    else if(email.value === ''){
-        createError(email.name, email.parentElement)
-    }
-    else if(date.value === ''){
-        createError(date.name, date.parentElement)
-    }
-    else if(degree.value === '-1'){
-        createError(degree.name, degree.parentElement)
-    }
-    else if(selectedLocationValues.length === 0){
-        createError("Location", locationByuser)
-    }
-    else{
-        return true
-    }
-}
+let wheather = {
+    coord: {
+      lon: 80.2785,
+      lat: 13.0878
+    },
+    weather: [
+      {
+        id: 701,
+        main: "Mist",
+        description: "mist",
+        icon: "50n"
+      }
+    ],
+    base: "stations",
+    main: {
+      temp: 28.31,
+      feels_like: 33.42,
+      temp_min: 27.99,
+      temp_max: 28.31,
+      pressure: 1016,
+      humidity: 83
+    },
+    visibility: 5000,
+    wind: {
+      speed: 3.6,
+      deg: 70
+    },
+    clouds: {
+      all: 40
+    },
+    dt: 1699278380,
+    sys: {
+      type: 2,
+      id: 2012809,
+      country: "IN",
+      sunrise: 1699230842,
+      sunset: 1699272656
+    },
+    timezone: 19800,
+    id: 1264527,
+    name: "Chennai",
+    cod: 200
+  }
