@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="heading">
+    <h3 class="title">Project Example</h3>
+    <button id="main_button">Add task</button>
+  </div>
+  <div class="main_container">
+    <div class="box boxone_color todo">
+      <div class="box_heading">
+        <h4 class="sub_title">To Do</h4>
+      </div>
+    <div class="todoList">
+
+    </div>
+    </div>
+    <div class="box boxtwo_color">
+      <div class="box_heading">
+        <h4 class="sub_title">In Progress</h4>
+      </div>
+      <div class="sub_box">
+        <h5 class="common_heading">Coffee Break</h5>
+        <div class="common_content">
+          <button class="common_button boxtwo_color">Always</button>
+        </div>
+      </div>
+      <div class="sub_box">
+        <h5 class="common_heading">Updating Portfolio</h5>
+        <div class="common_content">
+          <button class="common_button boxtwo_color">Webflow</button>
+        </div>
+      </div>
+    </div>
+    <div class="box_two boxthree_color">
+      <div class="box_heading">
+        <h4 class="sub_title">Review</h4>
+      </div>
+      <div class="sub_box">
+        <h5 class="common_heading">Release to Figma Community</h5>
+        <div class="common_content">
+          <button class="common_button boxthree_color">Release</button>
+        </div>
+      </div>
+      <div class="sub_box">
+        <h5 class="common_heading">Users Feedback</h5>
+        <div class="common_content">
+          <button class="common_button boxthree_color">Feedback</button>
+        </div>
+      </div>
+      <div class="sub_box">
+        <h5 class="common_heading">Background image from humaaans.com </h5>
+        <div class="common_content">
+          <button class="common_button boxthree_color">Sourcing</button>
+        </div>
+      </div>
+    </div>
+    <div class="box_two boxfour_color">
+      <div class="box_heading">
+        <h4 class="sub_title">Done</h4>
+      </div>
+      <div class="doneList">
+        
+      </div>
+    </div>
+
+
+    <!-- popup -->
+    <div class="popup_container">
+      <div class="popup_content">
+        <h2 class="popup_heading">Add TODO</h2>
+        <button class="close">close</button>
+        <div class="form">
+          <td><input class="input_box" type="text" name="" id="title" placeholder="Enter your name"></td>
+          <td><textarea name="description" id="description" cols="30" rows="5" placeholder="Description"></textarea></td>
+          <td><input class="input_box" type="date" name="" id="date"></td>
+          <div>
+            <input type="radio" name="priority" id="low" checked>
+            <label class="radio_input" for="low" >Low</label>
+            <input type="radio" name="priority" id="medium">
+            <label class="radio_input" for="medium">Medium</label>
+            <input type="radio" name="priority" id="high">
+            <label class="radio_input" for="high">High</label>
+          </div>
+          <button class="popup_button">Submit</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
