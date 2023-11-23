@@ -21,11 +21,12 @@ document.querySelector(".popup_button").addEventListener("click",function(){
     let priority = Array.from(values).find(radio => radio.checked)
 
     let data = {
+        id: Math.floor(Math.random() * 100) + 1,
         title : title.value,
         description: description.value,
         date: date.value,
         prority: priority.id,
-        status: 'done'
+        status: 'todo'
     }
     allTasks.push(data)
 
@@ -49,8 +50,9 @@ let done = document.querySelector('.doneList')
 
 function updateUI(){
     todo.innerHTML = ''
+    done.innerHTML = ''
     allTasks.forEach((task) =>{
-        let element =  `<div class="sub_box">
+        let element =  `<div class="sub_box" draggable="true" id=${task.id}>
                          <h5 class="common_heading">${task.title}</h5>
                          <p>${task.description}</p>
                         <div class="common_content">
@@ -61,7 +63,7 @@ function updateUI(){
         if(task.status == 'done'){
             done.insertAdjacentHTML('beforeend', element)
         }
-        else {
+        else if(task.status == 'todo'){
             todo.insertAdjacentHTML('beforeend', element)
         }
         
@@ -69,3 +71,39 @@ function updateUI(){
 }
 
 updateUI()
+
+
+
+let boxes = document.querySelectorAll('.box')
+let dragabbleElement = null
+
+boxes.forEach((box)=> {
+
+    box.addEventListener('dragstart', function(event){
+        dragabbleElement = event.target
+        event.target.style.opacity = '0.5'
+    })
+
+    box.addEventListener('dragover', function(event){
+        event.preventDefault()
+    })
+
+    box.addEventListener('drop', function(event){
+        if(dragabbleElement){
+            box.appendChild(dragabbleElement)
+        }
+    })
+
+    box.addEventListener('dragend', function(event){
+        event.target.style.opacity = '1'
+        let id = event.target.id
+        let status = box.classList[2]
+
+        let findIdx = allTasks.findIndex((item)=> item.id == id)
+        allTasks[findIdx].status = status
+        localStorage.setItem('task', JSON.stringify(allTasks))
+    })
+
+   
+})
+
