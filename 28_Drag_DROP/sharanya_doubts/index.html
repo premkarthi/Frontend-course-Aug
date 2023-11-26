@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- header start -->
+    <div class="Kanban">
+      <div class="container">
+        <div class="header">
+          <div class="headerleft">
+            <h1>Project Example</h1>
+          </div>
+          <div class="headerright">
+            <button onclick="openForm()">Add task</button>
+            <div id="form-container">
+              <h1>Add TODO</h1>
+              <span id="close-btn" onclick="closeForm()">&#10006;</span>
+              <form>
+                <input type="text" id="title" name="inputField" required />
+                <br /><br />
+                <textarea
+                  id="description"
+                  name="description"
+                  rows="4"
+                  cols="30"
+                ></textarea>
+                <br /><br />
+                <input type="date" id="dateField" name="dateField" required />
+                <br /><br />
+                <input type="radio"  id="low" name="priority" />
+                <label class="radio_input" for="low">Low</label>
+                <input type="radio"  id="medium" name="priority" />
+                <label class="radio_input" for="medium">Medium</label>
+                <input type="radio"  id="high" name="priority" />
+                <label class="radio_input" for="high">High</label>
+                <br /><br />
+                <button onclick="submitForm()">Submit</button>
+                <br />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- header end -->
+      <!-- container start -->
+      <div class="middle">
+        <div class="container">
+          <div class="cards">
+            <div class="card1">
+              <div class="card11">
+                <div class="cardright">
+                  <h4>TO DO</h4>
+                </div>
+              </div>
+              <div class="middle todoList">
+             
+
+
+              </div>
+            </div>
+
+            <div class="card2">
+              <div class="cards2">
+                <div class="card22">
+                  <div class="cardright">
+                    <h4>In Progress</h4>
+                  </div>
+                </div>
+                <div class="middle">
+               
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card3">
+              <div class="cards3">
+                <div class="card33">
+                  <div class="cardright">
+                    <h4>Review</h4>
+                  </div>
+                </div>
+                <div class="middle">
+                 
+                </div>
+              </div>
+            </div>
+
+            <div class="card4">
+              <div class="cards4">
+                <div class="card44">
+                  <div class="cardright">
+                    <h4>Done</h4>
+                  </div>
+                </div>
+                <div class="middle">
+              
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="doneList"></div>
+      </div>
+      <!-- container end -->
+
+  
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
