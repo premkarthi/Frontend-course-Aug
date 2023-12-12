@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Form</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    form, .list {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .list div{
+        margin-bottom: 10px;
+        padding: 10px;
+        border-bottom: 1px solid;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+      margin-right: 8px;
+      margin-bottom: 0;
+      width: auto;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label>Gender:</label>
+    <label><input type="radio" name="gender"  value="male" checked> Male</label>
+    <label><input type="radio" name="gender" value="female"> Female</label>
+    <br>
+    <button type="submit" class="submit">Submit</button>
+  </form>
+
+  <div class="list">
+
+  </div>
+  <script>
+
+    let list = document.querySelector('.list')
+    let name = document.getElementById('name')
+    let email = document.getElementById('email')
+    let genderList = document.querySelectorAll('input[name="gender"]')
+    let checkedValue = [...genderList].find((item)=> item.checked == true)
+    let submit = document.querySelector('.submit')
+
+    submit.addEventListener('click', addTodoInDom)
+
+    let allUsers = JSON.parse(localStorage.getItem('users')) || []
+
+    function addTodoInDom(e){
+        e.preventDefault()
+        if(name.value.length === 0 || email.value.length === 0 ){
+            console.log("All the fields are must")
+            return
+        }
+
+        let user ={
+            id: new Date().getTime(),
+            firstname:  name.value,
+            email: email.value,
+            gender : checkedValue.value
+        }
+
+        allUsers.push(user)
+        localStorage.setItem('users', JSON.stringify(allUsers))
+        updateUI(allUsers)
+
+        name.value = ''
+        email.value = ''
+    }
+
+
+    updateUI(allUsers)
+
+    function updateUI(users){   
+        list.innerHTML = ''
+        users.forEach(user => {
+            let element = document.createElement('div')
+            element.classList.add('item')
+            element.id = user.id
+            let htmls = `${user.firstname} - ${user.gender} <button class="delete">Del</button>`
+            element.innerHTML = htmls
+            list.appendChild(element)
+        });
+    }
+
+        list.addEventListener('click', function(e){
+            let isDeleteBtn = e.target.classList.contains('delete')
+            if(isDeleteBtn){
+                userId = e.target.parentElement.id;
+                let filterUsers = allUsers.filter((item)=> item.id != userId)
+                localStorage.setItem('users', JSON.stringify(filterUsers))
+                updateUI(filterUsers)
+            }
+            return
+        })  
+
+  </script>
+
+
+
+</body>
+</html>
+
+<!-- 
+Need a form which contains two input field with name of and one radio 
+On submit store the date in Database
+and print those data in UI -->
+<!-- 
+1. Create a form
+2. Do a basic validations 
+3. Do stylings
+4. Take all the fields value to JS 
+5. On submit store those values in one Place
+6. And then update those values in UI
+7. for updating UI we should create elements for those data
+8. and update all values in localStorage -->

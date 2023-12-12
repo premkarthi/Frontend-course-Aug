@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Example</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="projectBox">
+        <div class="heading">
+            <h1 class="title"> Project Example</h1>
+            <button id="Add_Button">Add task</button>
+        </div>
+
+        <div class="mine_box">
+            <div class="boxone1">
+                <div class="box">
+                    <h4>ToDo</h4>
+                </div>
+                <div class="todoList">
+
+                </div>
+            </div>
+
+            <div class="boxone2">
+                <div class="box">
+                    <h4>In Progress</h4>
+                </div>
+                <div class="In inprogressList">
+
+                </div>
+
+            </div>
+
+                <div class="boxTwo1">
+                    <div class="box1">
+                        <h4>Review</h4>
+                    </div>
+                    <div class="reviewList">
+
+                    </div>
+                </div>
+
+                <div class="boxTwo2">
+                    <div class="box1">
+                        <h4>Done</h4>
+                    </div>
+                    <div class="doneList">
+
+                    </div>
+                </div>
+                </div>
+
+        </div>
+
+        <!--popup-->
+        <div class="popup_container">
+            <div class="popup_content">
+                <h2 class="popup_heading">Add TODO</h2>
+                <button class="close">close</button>
+                
+                <div class="form">
+                    <td><input class="input_box" type="text" name="" id="title" placeholder="Enter ypur name"></td>
+                    <td><textarea class="description"  name="description" id="description" cols="30" rows="5" placeholder="Description"></textarea></td>
+                    <td><input class="input_box" type="date" name="" id="date"></td>
+                </div>
+                <input type="radio" name="priority" id="low" checked>
+                <label class="radio_input" for="low">Low</label>
+                <input type="radio" name="priority" id="medium" checked>
+                <label class="radio_input" for="medium">Medium</label>
+                <input type="radio" name="priority" id="high" checked>
+                <label class="radio_input" for="high">High</label>
+
+            <button class="popup_button">Submit</button>
+        </div>
+        </div>
+
+
+        <script src="./new task.js"></script>
+            
+    
+    
+
+
+</body>
+</html> 
