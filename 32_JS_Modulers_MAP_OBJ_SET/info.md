@@ -9,3 +9,7 @@ Set
 
 
 Generators
+
+<!-- 
+array methods
+object methods -->
