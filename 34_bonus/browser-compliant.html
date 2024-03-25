@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5">
+    <!-- meta author -->
+    <!-- meta keywords -->
+    <!-- meta description -->
+    <title>Document</title>
+</head>
+
+<style>
+
+    body{
+        background: green;
+    }
+
+
+    /* ipad Air  */
+    @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    body{
+        background: brown;
+    }
+}
+
+    @-moz-document url-prefix() {
+        body{
+            background: red;
+
+            /* Prifixes  */
+            /* animation: ease; // common
+            -webkit-animation: ease;  // chrome safari
+            -moz-animation: ease;  /firefox
+            -o-animation: ease;  / IE / Edge / Opera
+            -ms-zoom-animation: ; /IE */
+
+            /* prefixs */
+            /* Android: -webkit-
+            Chrome: -webkit-
+            Firefox: -moz-
+            Internet Explorer: -ms-
+            iOS: -webkit-
+            Opera: -o-
+            Safari: -webkit- */
+
+        }    
+    }
+
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    input[type=number] {
+        -moz-appearance:textfield;
+    }
+
+    @media screen  and (max-width:768px){
+        body{
+            background: white;
+        }
+    }
+</style>
+<body>
+    
+
+    <input type="number" value="10" aria-label="Hey i am input something ">
+
+    <p>Lo    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  rem, ipsum dolor sit amet consectetur adipisicing elit. Et, praesentium totam! Reprehenderit, ratione facere animi unde eaque ea vel, eligendi aliquam iste similique molestias beatae saepe sapiente laudantium optio atque.</p>
+
+</body>
+</html>
